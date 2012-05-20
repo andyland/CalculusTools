@@ -37,9 +37,6 @@ public class Help extends Activity {
 	// Creates menu
 	public boolean onCreateOptionsMenu(Menu menu) {
 		menu.add(Menu.NONE, 0, Menu.NONE, getString(R.string.home)); 
-		if(Derivative.ads){
-			menu.add(Menu.NONE, 100, Menu.NONE, getString(R.string.donate)); 
-		}
 		return true;
 	}
 

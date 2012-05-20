@@ -326,7 +326,7 @@ public class AndyMath {
 		return d;
 	}
 
-	public String getDerivative(Context context, String fun, String[] var, String resp) throws ParseError{
+	public static String getDerivative(Context context, String fun, String[] var, String resp) throws ParseError{
 		Parser parParser = new Parser(Parser.STANDARD_FUNCTIONS | Parser.OPTIONAL_PARENS
 				| Parser.OPTIONAL_STARS | Parser.OPTIONAL_SPACES
 				| Parser.BRACES | Parser.BRACKETS| Parser.BOOLEANS);
@@ -351,7 +351,7 @@ public class AndyMath {
 					, new ParserContext(resp, 0, null));
 	}
 	
-	public String getFunctionVal(Context context, String fun, String[] var, String resp, String[] vals) throws ParseError{
+	public static String getFunctionVal(Context context, String fun, String[] var, String resp, String[] vals) throws ParseError{
 		Parser parParser = new Parser(Parser.STANDARD_FUNCTIONS | Parser.OPTIONAL_PARENS
 				| Parser.OPTIONAL_STARS | Parser.OPTIONAL_SPACES
 				| Parser.BRACES | Parser.BRACKETS| Parser.BOOLEANS);
@@ -402,7 +402,7 @@ public class AndyMath {
 		}
 	}
 
-	public double getFunctionVal(Context context, String f, double s) throws ParseError{
+	public static double getFunctionVal(Context context, String f, double s) throws ParseError{
 		Parser tempP = new Parser(Parser.STANDARD_FUNCTIONS | Parser.OPTIONAL_PARENS
 				| Parser.OPTIONAL_STARS | Parser.OPTIONAL_SPACES
 				| Parser.BRACES | Parser.BRACKETS| Parser.BOOLEANS);

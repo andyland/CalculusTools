@@ -35,8 +35,6 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Derivative extends ActionBarListActivity {
-	public static boolean ads = false;
-    public static AndyMath andyMath;
 	private static String[] listItems;
 	static DisplayMetrics metrics;
 	public ListView lv;
@@ -56,9 +54,6 @@ public class Derivative extends ActionBarListActivity {
 				
 		adapter = new ArrayAdapter<String>(this, R.layout.mainlist, listItems);
 		lv = getListView();
-		if (getString(R.string.addBool).equals("true")) {
-			ads = true;
-		}
 		setListAdapter(adapter);
 		lv.setTextFilterEnabled(true);
 
@@ -100,9 +95,6 @@ public class Derivative extends ActionBarListActivity {
 		menu.add(Menu.NONE, 0, Menu.NONE, getString(R.string.matrices));
 		menu.add(Menu.NONE,98,Menu.NONE,getString(R.string.options));
 		menu.add(Menu.NONE, 99, Menu.NONE, getString(R.string.help));
-		if(ads){
-			menu.add(Menu.NONE, 100, Menu.NONE, getString(R.string.donate));
-		}
 		return super.onCreateOptionsMenu(menu);
 	}
 	

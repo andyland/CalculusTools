@@ -89,9 +89,6 @@ public class Calculator extends AndyActivity {
 		}
 		menu.add(Menu.NONE, 1, Menu.NONE, getString(R.string.matrices));
 		menu.add(Menu.NONE, 99, Menu.NONE, getString(R.string.help));
-		if(Derivative.ads){
-			menu.add(Menu.NONE, 100, Menu.NONE, getString(R.string.donate));
-		}
 		return true;
 	}
 	
@@ -109,9 +106,6 @@ public class Calculator extends AndyActivity {
 			menu.add(Menu.NONE,3,Menu.NONE,getString(R.string.paste));
 		}
 		menu.add(Menu.NONE, 99, Menu.NONE, getString(R.string.help));
-		if(Derivative.ads){
-			menu.add(Menu.NONE, 100, Menu.NONE, getString(R.string.donate));
-		}
 		return true;
 	}
     

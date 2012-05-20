@@ -87,23 +87,23 @@ public class GraphWindow extends Activity {
 			@Override
 			public void onClick(View v) {
 				try {
-					double xMin = Derivative.andyMath.getFunctionVal(getApplicationContext(), XMinText
+					double xMin = AndyMath.getFunctionVal(getApplicationContext(), XMinText
 							.getText().toString(), 0);
-					double xMax = Derivative.andyMath.getFunctionVal(getApplicationContext(), XMaxText
+					double xMax = AndyMath.getFunctionVal(getApplicationContext(), XMaxText
 							.getText().toString(), 0);
-					double yMin = Derivative.andyMath.getFunctionVal(getApplicationContext(), YMinText
+					double yMin = AndyMath.getFunctionVal(getApplicationContext(), YMinText
 							.getText().toString(), 0);
-					double yMax = Derivative.andyMath.getFunctionVal(getApplicationContext(), YMaxText
+					double yMax = AndyMath.getFunctionVal(getApplicationContext(), YMaxText
 							.getText().toString(), 0);
-					double xScale = Derivative.andyMath.getFunctionVal(getApplicationContext(), 
+					double xScale = AndyMath.getFunctionVal(getApplicationContext(), 
 							XScaleText.getText().toString(), 0);
-					double yScale = Derivative.andyMath.getFunctionVal(getApplicationContext(), 
+					double yScale = AndyMath.getFunctionVal(getApplicationContext(), 
 							YScaleText.getText().toString(), 0);
 					double startVal = -1 * Math.PI;
 					double endVal = -1 * Math.PI;
 					if(polar || param){
-						startVal = Derivative.andyMath.getFunctionVal(getApplicationContext(), StartTheta.getText().toString(),0);
-						endVal = Derivative.andyMath.getFunctionVal(getApplicationContext(), EndTheta.getText().toString(),0);
+						startVal = AndyMath.getFunctionVal(getApplicationContext(), StartTheta.getText().toString(),0);
+						endVal = AndyMath.getFunctionVal(getApplicationContext(), EndTheta.getText().toString(),0);
 					}
 					
 					if (xMax <= xMin) {

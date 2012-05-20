@@ -139,21 +139,21 @@ public class DerivativeActivity extends AndyActivity {
 					}
 				}
 				try {
-					String s =Derivative.andyMath.getDerivative(getApplicationContext(), FunText.getText().toString(),
+					String s = AndyMath.getDerivative(getApplicationContext(), FunText.getText().toString(),
 							vars, VarText.getText().toString());
 					DerText.setText(s);
 					if(r2.isChecked() || r3.isChecked() || r4.isChecked()){
-						s = Derivative.andyMath.getDerivative(getApplicationContext(), s,
+						s = AndyMath.getDerivative(getApplicationContext(), s,
 								vars, VarText.getText().toString());
 						DerText.setText(s);
 					}
 					if(r3.isChecked() || r4.isChecked()){
-						s = Derivative.andyMath.getDerivative(getApplicationContext(), s,
+						s = AndyMath.getDerivative(getApplicationContext(), s,
 								vars, VarText.getText().toString());
 						DerText.setText(s);
 					}
 					if(r4.isChecked()){
-						s = Derivative.andyMath.getDerivative(getApplicationContext(), s,
+						s = AndyMath.getDerivative(getApplicationContext(), s,
 								vars, VarText.getText().toString());
 						DerText.setText(s);
 					}
@@ -224,7 +224,7 @@ public class DerivativeActivity extends AndyActivity {
 					}
 				}
 				try {
-					evalOutput.setText(Derivative.andyMath.getFunctionVal(getApplicationContext(), DerText.getText().toString(),
+					evalOutput.setText(AndyMath.getFunctionVal(getApplicationContext(), DerText.getText().toString(),
 									vars, VarText.getText().toString(),vals));
 				} catch (Exception e) {
 					Toast.makeText(DerivativeActivity.this, e.getMessage(),
@@ -243,9 +243,6 @@ public class DerivativeActivity extends AndyActivity {
 		}
 		menu.add(Menu.NONE, 0, Menu.NONE, getString(R.string.home));
 		menu.add(Menu.NONE, 99, Menu.NONE, getString(R.string.help));
-		if(Derivative.ads){
-			menu.add(Menu.NONE, 100, Menu.NONE, getString(R.string.donate));
-		}
 		return true;
 	}
 

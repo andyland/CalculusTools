@@ -67,9 +67,6 @@ public class IntegralDisplayer extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		menu.add(Menu.NONE, 0, Menu.NONE, getString(R.string.home));
 		menu.add(Menu.NONE, 99, Menu.NONE, getString(R.string.help));
-		if(Derivative.ads){
-			menu.add(Menu.NONE,100, Menu.NONE, getString(R.string.donate));
-		}
 		return true;
 	}
 
