@@ -19,6 +19,7 @@ import com.andymcsherry.calculustools.library.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,30 +37,36 @@ public class IntegralDisplayer extends Activity {
 		setContentView(R.layout.integraldisplayer);
 		im1 = (ImageView) findViewById(R.id.ImageView01);
 		String choice = getIntent().getStringExtra("intChoice");
-		try{
+		//try{
+			Drawable d = null;
 		if (choice.equals("basic")) {
-			im1.setImageResource(R.drawable.intb);
+			d = getResources().getDrawable(R.drawable.intb);
 		} else if (choice.equals("trig")) {
-			im1.setImageResource(R.drawable.intt);
+			d = getResources().getDrawable(R.drawable.intt);
 		} else if (choice.equals("log")) {
-			im1.setImageResource(R.drawable.intl);
+			d = getResources().getDrawable(R.drawable.intl);
 		} else if (choice.equals("exp")) {
-			im1.setImageResource(R.drawable.inte);
+			d = getResources().getDrawable(R.drawable.inte);
 		} else if (choice.equals("itrig")) {
-			im1.setImageResource(R.drawable.intit);
+			d = getResources().getDrawable(R.drawable.intit);
 		} else if (choice.equals("hyp")) {
-			im1.setImageResource(R.drawable.inth);
+			d = getResources().getDrawable(R.drawable.inth);
 		} else if(choice.equals("dif")){
-			im1.setImageResource(R.drawable.dif);
+			d = getResources().getDrawable(R.drawable.dif);
 		} else if(choice.equals("lim")){
-			im1.setImageResource(R.drawable.lim);
+			d = getResources().getDrawable(R.drawable.lim);
 		} else if(choice.equals("trigi")){
-			im1.setImageResource(R.drawable.trig);
+			d = getResources().getDrawable(R.drawable.trig);
 		}
-		}catch(OutOfMemoryError e){
-			Toast.makeText(IntegralDisplayer.this, "Your phone has run out of available RAM.  Close some processes and try again.", Toast.LENGTH_LONG).show();
-			finish();
+		
+		if (null != d) {
+			im1.setImageDrawable(d);
 		}
+		
+//		}catch(OutOfMemoryError e){
+//			Toast.makeText(IntegralDisplayer.this, "Your phone has run out of available RAM.  Close some processes and try again.", Toast.LENGTH_LONG).show();
+//			finish();
+//		}
 	}
 
 	@Override

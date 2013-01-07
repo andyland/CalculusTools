@@ -879,7 +879,9 @@ public class GraphView extends View implements OnTouchListener {
 				}catch(ParseError e){}
 				try{
 					slope = threeDParser.parse(g.slope);
-				}catch(ParseError e){}
+				}catch(ParseError e){
+					slope = threeDParser.parse("1");
+				}
 			}
 		}
 		
